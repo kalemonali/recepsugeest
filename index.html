@@ -1,0 +1,92 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe API</title>
+  </head>
+
+<body style="background-color:#E0E0E0;>
+ <div class="login">
+	<h1>Recipe_Suggestion</h1>
+
+     
+    <form action="{{ url_for('predict')}}"method="post">
+	
+	
+    	<!--<input type="text" name="Food_type" placeholder="Food_type"/> -->
+		
+		<label for="Food_type">Food_type:</label>
+		  <select id="Food_type" name="Food_type"> 
+		  <option value=""></option>
+			<option selected ="selected" value="indian">indian</option>
+			<option value="continental">continental</option>
+			<option value="chinese">chinese</option>
+			<option value="other">other</option>
+		  </select>
+			&nbsp;&nbsp;&nbsp;&nbsp; 
+       <!-- <input type="text" name="Dish_type" placeholder="Dish_type" /> -->
+		
+		<label for="Dish_type">Dish_type:</label>
+		  <select id="Dish_type" name="Dish_type"> 
+		  <option value=""></option>
+			<option value="starter">starter</option>
+			<option value="snacks">snacks</option>
+			<option selected ="selected" value="main course">main course</option>
+			<option value="other">other</option>
+		  </select>
+		  &nbsp;&nbsp;&nbsp;&nbsp;
+		<!-- <input type="text" name="Dish_type veg or non_veg" placeholder="Dish_type veg or non_veg"/> -->
+		
+		<label for="Dish_type veg or non_veg">Dish_type veg or non_veg:</label>
+		  <select id="Dish_type veg or non_veg" name="Dish_type veg or non_veg"> 
+		  <option value=""></option>
+			<option selected ="selected" value="veg">veg</option>
+			<option value="non_veg">non_veg</option>
+			<option value="egg">egg</option>
+		  </select>
+		  &nbsp;&nbsp;&nbsp;&nbsp;
+		<!-- <input type="text" name="Region" placeholder="Region"  /> -->
+		
+		<label for="Region">Region:</label>
+		  <select id="Region" name="Region"> 
+		  <option value=""></option>
+			<option value="north">north</option>
+			<option value="south">south</option>
+			<option value="east">east</option>
+			<option value="west">west</option>
+			<option value="all">all</option>
+		  </select>
+		  &nbsp;&nbsp;&nbsp;&nbsp;
+	<!--	<input type="text" name="Mood" placeholder="Mood" /> -->
+		
+		<label for="Mood">Mood:</label>
+		  <select id="Mood" name="Mood"> 
+		  <option value=""></option>
+			<option selected ="selected" value="normal">normal</option>
+			<option value="happy">happy</option>
+			<option value="angry">angry</option>
+			<option value="sad">sad</option>
+		  </select>
+		  &nbsp;&nbsp;&nbsp;&nbsp;
+	<!--	<input type="text" name="Surprise" placeholder="Surprise" /> -->
+		  
+		  <label for="Surprise">do you want surprise :</label>
+		  <select id="Surprise" name="Surprise"> 
+		  <option value=""></option>
+			<option selected ="selected" value="no">no</option>
+			<option value="yes">yes</option>
+		  </select>
+
+		&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+
+       <center> <button type="submit" class="btn btn-primary btn-block btn-large">Suggestion</button></center>
+    </form>
+
+   <br>
+   <br>
+   {{ Suggestion_text }}
+
+ </div>
+
+
+</body>
+</html>
